@@ -1,0 +1,1318 @@
+abs: float|int|null
+acos: float|null
+acosh: float|null
+array_change_key_case: array|null
+array_chunk: array|null
+array_column: array|false|null
+array_combine: array|false|null
+array_count_values: array|null
+array_diff_assoc: null
+array_diff_key: null
+array_diff_uassoc: null
+array_diff_ukey: null
+array_fill: array|false|null
+array_fill_keys: array|null
+array_filter: array|null
+array_flip: array|null
+array_intersect: null
+array_intersect_assoc: null
+array_intersect_key: null
+array_intersect_uassoc: null
+array_intersect_ukey: null
+array_key_exists: bool|null
+array_key_first: null
+array_key_last: null
+array_keys: array|null
+array_merge: null
+array_merge_recursive: null
+array_multisort: bool|null
+array_product: int|null
+array_push: false|int|null
+array_rand: array|int|null|string
+array_replace: null
+array_replace_recursive: null
+array_reverse: array|null
+array_search: null
+array_slice: array|null
+array_splice: array|null
+array_sum: int|null
+array_udiff: null
+array_udiff_assoc: null
+array_udiff_uassoc: null
+array_uintersect: null
+array_uintersect_assoc: null
+array_uintersect_uassoc: null
+array_unshift: int|null
+array_values: array|null
+array_walk: null|true
+array_walk_recursive: null|true
+arsort: bool
+asin: float|null
+asinh: float|null
+asort: bool
+assert: bool
+atan: float|null
+atan2: float|null
+atanh: float|null
+base_convert: false|null|string
+bcadd: null|string
+bccomp: int|null
+bcdiv: null|string
+bcmod: null|string
+bcmul: null|string
+bcpow: null|string
+bcpowmod: false|null|string
+bcscale: int|null
+bcsqrt: null|string
+bcsub: null|string
+bindec: null
+boolval: bool|null
+cal_days_in_month: false|int|null
+cal_from_jd: array|false|null
+cal_info: array|false|null
+cal_to_jd: false|int|null
+ceil: float|null
+checkdate: bool
+class_implements: array|false
+class_parents: array|false
+class_uses: array|false
+closelog: null|true
+collator_asort: null
+collator_compare: false|int
+collator_create: null
+collator_get_attribute: false|int
+collator_get_error_code: false|int
+collator_get_error_message: false|string
+collator_get_locale: false|string
+collator_get_sort_key: false|string
+collator_get_strength: false|int
+collator_set_attribute: bool
+collator_set_strength: bool
+collator_sort: null
+collator_sort_with_sort_keys: bool
+compact: array|null
+connection_aborted: int
+connection_status: int
+convert_cyr_string: null|string
+convert_uudecode: false|null|string
+convert_uuencode: false|null|string
+cos: float|null
+cosh: float|null
+count: int|null
+crypt: null|string
+ctype_alnum: bool|null
+ctype_alpha: bool|null
+ctype_cntrl: bool|null
+ctype_digit: bool|null
+ctype_graph: bool|null
+ctype_lower: bool|null
+ctype_print: bool|null
+ctype_punct: bool|null
+ctype_space: bool|null
+ctype_upper: bool|null
+ctype_xdigit: bool|null
+date: null
+date_add: false|object
+date_create: false|null
+date_create_from_format: false|null
+date_create_immutable: false|null
+date_create_immutable_from_format: false|null
+date_date_set: false|object
+date_default_timezone_get: null|string
+date_default_timezone_set: bool
+date_diff: false|null
+date_format: false|string
+date_get_last_errors: array|false|null
+date_interval_create_from_date_string: false|null
+date_interval_format: false|string
+date_isodate_set: false|object
+date_modify: false|object
+date_offset_get: false|int|null
+date_parse: false|null
+date_parse_from_format: false|null
+date_sub: false|object
+date_sun_info: array|false
+date_sunrise: null
+date_sunset: null
+date_time_set: false|object
+date_timestamp_get: false|int|null
+date_timestamp_set: false|object
+date_timezone_get: false|null
+date_timezone_set: false|object
+datefmt_format: false|null
+datefmt_get_datetype: false|int
+datefmt_get_error_code: false|int
+datefmt_get_error_message: false|string
+datefmt_get_locale: false|string
+datefmt_get_pattern: false|string
+datefmt_get_timetype: false|int
+datefmt_is_lenient: bool
+datefmt_localtime: false|null
+datefmt_parse: false|null
+datefmt_set_lenient: false|null
+datefmt_set_pattern: bool
+debug_zval_dump: null
+decbin: null|string
+dechex: null|string
+decoct: null|string
+deg2rad: float|null
+dl: false|null
+dom_attr_is_id: bool|null
+dom_characterdata_append_data: null|true
+dom_characterdata_delete_data: bool|null
+dom_characterdata_insert_data: bool|null
+dom_characterdata_replace_data: bool|null
+dom_characterdata_substring_data: false|null|string
+dom_document_adopt_node: null
+dom_document_create_attribute: false|null
+dom_document_create_attribute_ns: false|null
+dom_document_create_cdatasection: false|null
+dom_document_create_comment: false|null
+dom_document_create_document_fragment: false|null
+dom_document_create_element: false|null
+dom_document_create_element_ns: false|null
+dom_document_create_entity_reference: false|null
+dom_document_create_processing_instruction: false|null
+dom_document_create_text_node: false|null
+dom_document_get_element_by_id: null
+dom_document_get_elements_by_tag_name: null
+dom_document_get_elements_by_tag_name_ns: null
+dom_document_import_node: false|null
+dom_document_normalize_document: null
+dom_document_relaxNG_validate_file: null
+dom_document_relaxNG_validate_xml: null
+dom_document_rename_node: null
+dom_document_save: false|int|null
+dom_document_save_html: false|null|string
+dom_document_save_html_file: false|int|null
+dom_document_savexml: false|null|string
+dom_document_schema_validate_file: null
+dom_document_schema_validate_xml: null
+dom_document_validate: bool|null
+dom_document_xinclude: false|int|null
+dom_domconfiguration_can_set_parameter: null
+dom_domconfiguration_get_parameter: null
+dom_domconfiguration_set_parameter: null
+dom_domerrorhandler_handle_error: null
+dom_domimplementationlist_item: null
+dom_domimplementationsource_get_domimplementation: null
+dom_domimplementationsource_get_domimplementations: null
+dom_domstringlist_item: null
+dom_element_get_attribute: null|string
+dom_element_get_attribute_node: false|null
+dom_element_get_attribute_node_ns: null
+dom_element_get_attribute_ns: null|string
+dom_element_get_elements_by_tag_name: null
+dom_element_get_elements_by_tag_name_ns: null
+dom_element_has_attribute: bool|null
+dom_element_has_attribute_ns: bool|null
+dom_element_remove_attribute: bool|null
+dom_element_remove_attribute_node: false|null
+dom_element_remove_attribute_ns: null
+dom_element_set_attribute: bool|null
+dom_element_set_attribute_node: false|null
+dom_element_set_attribute_node_ns: false|null
+dom_element_set_attribute_ns: false|null
+dom_element_set_id_attribute: null
+dom_element_set_id_attribute_node: null
+dom_element_set_id_attribute_ns: null
+dom_import_simplexml: null
+dom_namednodemap_count: false|null
+dom_namednodemap_get_named_item: null
+dom_namednodemap_get_named_item_ns: null
+dom_namednodemap_item: null
+dom_namednodemap_remove_named_item: null
+dom_namednodemap_remove_named_item_ns: null
+dom_namednodemap_set_named_item: null
+dom_namednodemap_set_named_item_ns: null
+dom_namelist_get_name: null
+dom_namelist_get_namespace_uri: null
+dom_node_append_child: false|null
+dom_node_clone_node: false|null
+dom_node_compare_document_position: null
+dom_node_get_feature: null
+dom_node_get_user_data: null
+dom_node_has_attributes: bool|null
+dom_node_has_child_nodes: bool|null
+dom_node_insert_before: false|null
+dom_node_is_default_namespace: bool|null
+dom_node_is_equal_node: null
+dom_node_is_same_node: bool|null
+dom_node_is_supported: bool|null
+dom_node_lookup_namespace_uri: null|string
+dom_node_lookup_prefix: null|string
+dom_node_normalize: null
+dom_node_remove_child: false|null
+dom_node_replace_child: false|null
+dom_node_set_user_data: null
+dom_nodelist_count: false|null
+dom_string_extend_find_offset16: null
+dom_string_extend_find_offset32: null
+dom_text_is_whitespace_in_element_content: bool|null
+dom_text_replace_whole_text: null
+dom_text_split_text: false|null
+dom_userdatahandler_handle: null
+dom_xpath_evaluate: null
+dom_xpath_query: null
+dom_xpath_register_ns: bool|null
+dom_xpath_register_php_functions: null|true
+easter_date: null
+easter_days: null
+error_clear_last: null
+error_get_last: array|null
+error_log: bool|null
+exif_imagetype: false|int|null
+exif_read_data: array|false|null
+exif_tagname: false|null|string
+exif_thumbnail: false|null|string
+exp: float|null
+expm1: float|null
+extract: int|null
+ezmlm_hash: int|null
+filter_has_var: bool
+filter_id: false|int|null
+filter_input_array: false|null
+filter_list: array|null
+filter_var_array: false|null
+floatval: float|null
+floor: float|null
+flush: null
+fmod: float|null
+fprintf: false|int|null
+frenchtojd: int|null
+fsockopen: null
+ftok: int|null
+get_browser: array|false|null
+get_cfg_var: array|false|null|string
+get_current_user: null|string
+get_headers: array|false|null
+get_html_translation_table: array|null
+get_include_path: false|null|string
+get_magic_quotes_gpc: false|null
+get_magic_quotes_runtime: false|null
+getdate: array|false
+getenv: array|false|string
+getimagesize: null
+getimagesizefromstring: null
+getlastmod: false|int|null
+getmygid: false|int|null
+getmyinode: false|int|null
+getmypid: false|int|null
+getmyuid: false|int|null
+getopt: array|false
+getprotobyname: false|int|null
+getprotobynumber: false|null|string
+getrusage: array|false|null
+getservbyname: false|int|null
+getservbyport: false|null|string
+gettimeofday: null
+gettype: null|string
+gmdate: null
+gmmktime: null
+gmstrftime: null
+grapheme_extract: false|string
+grapheme_stripos: false|int|null
+grapheme_stristr: null
+grapheme_strlen: false|int|null
+grapheme_strpos: false|int|null
+grapheme_strripos: false|int|null
+grapheme_strrpos: false|int|null
+grapheme_strstr: null
+grapheme_substr: false|string
+gregoriantojd: int|null
+hash: null
+hash_algos: array
+hash_copy: false|null|object
+hash_equals: bool|null
+hash_file: null
+hash_final: null|string
+hash_hkdf: false|null|string
+hash_hmac: null
+hash_hmac_algos: array
+hash_hmac_file: null
+hash_init: false|null
+hash_pbkdf2: false|null|string
+hash_update: null|true
+hash_update_file: bool|null
+hash_update_stream: false|int|null
+header: null
+header_remove: null
+headers_list: array|null
+headers_sent: bool|null
+hexdec: null
+highlight_file: bool|null
+highlight_string: bool|null
+hrtime: false
+html_entity_decode: false|null|string
+htmlentities: null
+htmlspecialchars: null
+htmlspecialchars_decode: false|null|string
+http_build_query: false|null|string
+http_response_code: bool|int|null
+hypot: float|null
+idate: false|int
+idn_to_ascii: null
+idn_to_utf8: null
+ignore_user_abort: int|null
+image_type_to_extension: false|string
+image_type_to_mime_type: null|string
+in_array: null
+inet_ntop: false|string
+ini_get: false|null|string
+ini_get_all: array|false|null
+ini_restore: null
+ini_set: false|null|string
+intdiv: int|null
+intl_error_name: false|string
+intl_get_error_code: int
+intl_get_error_message: string
+intl_is_failure: bool
+intval: int|null
+ip2long: false|int|null
+iptcembed: bool|null|string
+iptcparse: array|false|null
+is_array: null
+is_bool: bool
+is_callable: bool|null
+is_countable: bool|null
+is_finite: bool|null
+is_float: null
+is_infinite: bool|null
+is_int: null
+is_iterable: bool|null
+is_nan: bool|null
+is_null: null
+is_numeric: bool|null
+is_object: null
+is_resource: null
+is_scalar: bool|null
+is_soap_fault: bool
+is_string: null
+is_uploaded_file: bool|null
+iterator_apply: false|int|null
+iterator_count: false|int|null
+iterator_to_array: array|false|null
+jddayofweek: int|null|string
+jdmonthname: null|string
+jdtofrench: null|string
+jdtogregorian: null|string
+jdtojewish: false|null|string
+jdtojulian: null|string
+jdtounix: false|int|null
+jewishtojd: int|null
+json_decode: null
+json_encode: false|null|string
+json_last_error: int|null
+json_last_error_msg: null|string
+juliantojd: int|null
+key: null
+krsort: bool
+ksort: bool
+lcg_value: float|null
+levenshtein: int|null
+libxml_clear_errors: null
+libxml_disable_entity_loader: bool|null
+libxml_get_errors: array|null
+libxml_get_last_error: false|null
+libxml_set_external_entity_loader: null|true
+libxml_set_streams_context: null
+libxml_use_internal_errors: bool|null
+link: bool|null
+linkinfo: false|int|null
+locale_accept_from_http: false|string
+locale_canonicalize: null
+locale_compose: false|string
+locale_filter_matches: bool|null
+locale_get_all_variants: array|false|null
+locale_get_default: string
+locale_get_display_language: null
+locale_get_display_name: null
+locale_get_display_region: null
+locale_get_display_script: null
+locale_get_display_variant: null
+locale_get_keywords: array|false|null
+locale_get_primary_language: null
+locale_get_region: null
+locale_get_script: null
+locale_lookup: false|null|string
+locale_parse: array|false|null
+locale_set_default: bool
+localtime: array|false
+log: false|float|null
+log10: float|null
+log1p: float|null
+long2ip: false|null|string
+mail: bool|null
+memory_get_peak_usage: false|int
+memory_get_usage: false|int
+metaphone: false|null|string
+microtime: null
+mktime: null
+move_uploaded_file: bool
+msg_queue_exists: bool|null
+msg_receive: bool
+msg_remove_queue: bool|null
+msg_send: bool
+msg_set_queue: bool
+msg_stat_queue: array|false
+msgfmt_create: null
+msgfmt_format: false|null
+msgfmt_format_message: false|null
+msgfmt_get_error_code: false|int
+msgfmt_get_error_message: false|string
+msgfmt_get_locale: false|string
+msgfmt_get_pattern: false|string
+msgfmt_parse: false|null
+msgfmt_parse_message: false|null
+msgfmt_set_pattern: bool
+mt_getrandmax: int|null
+mt_rand: false|int
+mt_srand: null
+mysqli_affected_rows: false|int|null|string
+mysqli_autocommit: bool|null
+mysqli_begin_transaction: bool|null
+mysqli_change_user: bool|null
+mysqli_character_set_name: false|null|string
+mysqli_close: bool|null
+mysqli_commit: bool|null
+mysqli_connect: null
+mysqli_connect_errno: int
+mysqli_connect_error: null|string
+mysqli_data_seek: bool|null
+mysqli_debug: null|true
+mysqli_driver_construct: null
+mysqli_dump_debug_info: bool|null
+mysqli_errno: false|int|null
+mysqli_error: false|null|string
+mysqli_error_list: array|false|null
+mysqli_fetch_all: false|null
+mysqli_fetch_array: null
+mysqli_fetch_assoc: null
+mysqli_fetch_field: false|null
+mysqli_fetch_field_direct: false|null
+mysqli_fetch_fields: array|false|null
+mysqli_fetch_lengths: array|false|null
+mysqli_fetch_object: null
+mysqli_fetch_row: null
+mysqli_field_count: false|int|null
+mysqli_field_seek: bool|null
+mysqli_field_tell: false|int|null
+mysqli_free_result: false|null
+mysqli_get_charset: false|null
+mysqli_get_client_info: null|string
+mysqli_get_client_stats: null
+mysqli_get_client_version: int
+mysqli_get_connection_stats: false|null
+mysqli_get_host_info: false|null|string
+mysqli_get_links_stats: array|null
+mysqli_get_proto_info: false|int|null
+mysqli_get_server_info: false|null|string
+mysqli_get_server_version: false|int|null
+mysqli_get_warnings: false|null|object
+mysqli_info: false|null|string
+mysqli_init: null
+mysqli_init_method: null
+mysqli_insert_id: false|int|null|string
+mysqli_kill: bool|null
+mysqli_link_construct: null
+mysqli_more_results: bool|null
+mysqli_multi_query: bool|null
+mysqli_next_result: bool|null
+mysqli_num_fields: false|int|null
+mysqli_num_rows: false|int|null|string
+mysqli_options: bool|null
+mysqli_ping: bool|null
+mysqli_poll: false|int|null
+mysqli_prepare: false|null|object
+mysqli_query: bool|null|object
+mysqli_real_connect: null
+mysqli_real_escape_string: false|null|string
+mysqli_real_query: bool|null
+mysqli_reap_async_query: bool|null|object
+mysqli_refresh: bool|null
+mysqli_release_savepoint: bool|null
+mysqli_report: null|true
+mysqli_result_construct: false|null
+mysqli_rollback: bool|null
+mysqli_savepoint: bool|null
+mysqli_select_db: bool|null
+mysqli_set_charset: bool|null
+mysqli_sqlstate: false|null|string
+mysqli_ssl_set: bool|null
+mysqli_stat: false|null|string
+mysqli_stmt_affected_rows: false|int|null|string
+mysqli_stmt_attr_get: false|int|null
+mysqli_stmt_attr_set: bool|null
+mysqli_stmt_bind_param: bool|null
+mysqli_stmt_bind_result: bool|null
+mysqli_stmt_close: bool|null
+mysqli_stmt_construct: false|null
+mysqli_stmt_data_seek: false|null
+mysqli_stmt_errno: false|int|null
+mysqli_stmt_error: false|null|string
+mysqli_stmt_error_list: array|false|null
+mysqli_stmt_execute: bool|null
+mysqli_stmt_fetch: null
+mysqli_stmt_field_count: false|int|null
+mysqli_stmt_free_result: false|null
+mysqli_stmt_get_result: false|null|object
+mysqli_stmt_get_warnings: false|null|object
+mysqli_stmt_init: false|null|object
+mysqli_stmt_insert_id: false|int|null|string
+mysqli_stmt_more_results: bool|null
+mysqli_stmt_next_result: bool|null
+mysqli_stmt_num_rows: false|int|null|string
+mysqli_stmt_param_count: false|int|null
+mysqli_stmt_prepare: bool|null
+mysqli_stmt_reset: bool|null
+mysqli_stmt_result_metadata: false|null|object
+mysqli_stmt_send_long_data: bool|null
+mysqli_stmt_sqlstate: false|null|string
+mysqli_stmt_store_result: bool|null
+mysqli_store_result: false|null|object
+mysqli_thread_id: false|int|null
+mysqli_thread_safe: true
+mysqli_use_result: false|null|object
+mysqli_warning_count: false|int|null
+natcasesort: null
+natsort: null
+net_get_interfaces: array|false|null
+normalizer_is_normalized: bool
+normalizer_normalize: false|null|string
+number_format: null|string
+numfmt_create: null
+numfmt_format: false|string
+numfmt_format_currency: false|null|string
+numfmt_get_attribute: false|float|int|null
+numfmt_get_error_code: false|int
+numfmt_get_error_message: false|string
+numfmt_get_locale: false|string
+numfmt_get_pattern: false|string
+numfmt_get_symbol: false|string
+numfmt_get_text_attribute: false|string
+numfmt_parse: false|float|int
+numfmt_parse_currency: false|float
+numfmt_set_attribute: bool
+numfmt_set_pattern: bool
+numfmt_set_symbol: bool
+numfmt_set_text_attribute: bool
+octdec: null
+opcache_compile_file: bool|null
+opcache_get_configuration: array|false
+opcache_get_status: array|false|null
+opcache_invalidate: bool|null
+opcache_is_script_cached: bool
+opcache_reset: bool
+openlog: bool|null
+pack: false|null|string
+parse_ini_file: array|false
+parse_ini_string: array|false
+parse_url: array|false|int|null|string
+password_algos: array|null
+password_get_info: array|null
+password_hash: null|string
+password_needs_rehash: bool|null
+password_verify: bool|null
+pcntl_alarm: int|null
+pcntl_async_signals: bool
+pcntl_exec: false|null
+pcntl_fork: int
+pcntl_get_last_error: int
+pcntl_getpriority: false|int
+pcntl_setpriority: bool
+pcntl_signal: bool|null
+pcntl_signal_dispatch: true
+pcntl_signal_get_handler: false|int|null
+pcntl_sigprocmask: bool|null
+pcntl_strerror: false|string
+pcntl_unshare: bool|null
+pcntl_wait: int|null
+pcntl_waitpid: int|null
+pcntl_wexitstatus: false
+pcntl_wifcontinued: false
+pcntl_wifexited: false
+pcntl_wifsignaled: false
+pcntl_wifstopped: false
+pcntl_wstopsig: false
+pcntl_wtermsig: false
+pdo_drivers: array|null
+pfsockopen: null
+php_ini_loaded_file: false|null|string
+php_ini_scanned_files: false|null|string
+php_sapi_name: false|null|string
+php_strip_whitespace: false|null|string
+php_uname: null|string
+phpcredits: null|true
+phpinfo: null|true
+phpversion: false|null|string
+pi: float
+pow: null
+preg_filter: null
+preg_grep: false|null
+preg_last_error: int|null
+preg_match: null
+preg_match_all: null
+preg_quote: null|string
+preg_replace: null
+preg_replace_callback: null|string
+preg_split: false|null
+print_r: bool|null|string
+putenv: bool|null
+quoted_printable_decode: null|string
+quoted_printable_encode: null|string
+rad2deg: float|null
+rand: int
+random_bytes: null|string
+random_int: int|null
+range: array|false|null
+rawurldecode: null|string
+rawurlencode: null|string
+readlink: false|null|string
+register_shutdown_function: false|null
+register_tick_function: bool|null
+resourcebundle_count: false|int
+resourcebundle_create: null
+resourcebundle_get: false|null
+resourcebundle_get_error_code: false|int
+resourcebundle_get_error_message: false|string
+resourcebundle_locales: array|false
+restore_include_path: null
+round: false|float|null
+rsort: bool
+sem_acquire: null
+sem_get: false|resource
+sem_release: null
+sem_remove: bool|null
+serialize: false|null|string
+session_abort: bool|null
+session_cache_expire: false|int|null
+session_cache_limiter: false|null|string
+session_create_id: false|null|string
+session_decode: bool|null
+session_destroy: bool|null
+session_encode: false|null|string
+session_gc: false|int|null
+session_get_cookie_params: array|null
+session_id: false|null|string
+session_module_name: false|null|string
+session_name: false|null|string
+session_regenerate_id: bool|null
+session_register_shutdown: null
+session_reset: bool|null
+session_save_path: false|null|string
+session_set_cookie_params: bool|null
+session_set_save_handler: bool
+session_start: bool
+session_status: int|null
+session_unset: bool|null
+session_write_close: bool|null
+set_include_path: false|null|string
+setcookie: bool|null
+setrawcookie: bool|null
+settype: bool|null
+sha1: null|string
+sha1_file: false|null|string
+shm_attach: false|null|resource
+shm_detach: bool|null
+shm_get_var: false|null
+shm_has_var: bool|null
+shm_put_var: bool|null
+shm_remove: bool|null
+shm_remove_var: bool|null
+shmop_close: null
+shmop_delete: bool|null
+shmop_open: false|null|resource
+shmop_read: false|null|string
+shmop_size: int|null
+shmop_write: false|int|null
+shuffle: bool
+simplexml_import_dom: null|object
+simplexml_load_file: false|null|object
+simplexml_load_string: false|null|object
+sin: float|null
+sinh: float|null
+sleep: false|int
+sort: bool
+soundex: false|null|string
+spl_autoload: false|null
+spl_autoload_call: null
+spl_autoload_extensions: null|string
+spl_autoload_functions: array|false|null
+spl_autoload_register: bool|null
+spl_autoload_unregister: bool|null
+spl_classes: array
+spl_object_hash: null|string
+spl_object_id: int|null
+sqrt: float|null
+stream_bucket_append: null
+stream_bucket_make_writeable: false|null
+stream_bucket_new: false|null
+stream_bucket_prepend: null
+stream_filter_register: bool
+stream_get_filters: array|null
+strftime: null
+strptime: array|false|null
+strtotime: false|int|null
+strval: null|string
+symlink: bool|null
+sys_getloadavg: array|false|null
+syslog: null|true
+tan: float|null
+tanh: float|null
+time: int|null
+time_nanosleep: array|bool|null
+time_sleep_until: bool|null
+timezone_abbreviations_list: array
+timezone_identifiers_list: array|false
+timezone_location_get: array|false
+timezone_name_from_abbr: false|null|string
+timezone_name_get: false|null
+timezone_offset_get: false|int
+timezone_open: false|null
+timezone_transitions_get: array|false
+timezone_version_get: string
+transliterator_create: null
+transliterator_create_from_rules: null
+transliterator_create_inverse: false|null
+transliterator_get_error_code: false|int
+transliterator_get_error_message: false|string
+transliterator_list_ids: array|false|null
+transliterator_transliterate: false|null|string
+uasort: null
+uksort: null
+uniqid: null|string
+unixtojd: false|int|null
+unpack: array|false|null
+unregister_tick_function: null
+urldecode: null|string
+urlencode: null|string
+use_soap_error_handler: bool
+user_filter_nop: null
+user_printf: false|int|null
+user_sprintf: false|null|string
+usleep: false|null
+usort: null
+var_dump: null
+var_export: null|string
+version_compare: bool|int|null
+vfprintf: false|int|null
+vprintf: false|int|null
+vsprintf: false|null|string
+xml_error_string: null|string
+xml_get_current_byte_index: int|null
+xml_get_current_column_number: int|null
+xml_get_current_line_number: int|null
+xml_get_error_code: int|null
+xml_parse: int|null
+xml_parse_into_struct: int|null
+xml_parser_create: null
+xml_parser_create_ns: null
+xml_parser_free: bool|null
+xml_parser_get_option: false|int|null|string
+xml_parser_set_option: bool|null
+xml_set_character_data_handler: null|true
+xml_set_default_handler: null|true
+xml_set_element_handler: null|true
+xml_set_end_namespace_decl_handler: null|true
+xml_set_external_entity_ref_handler: null|true
+xml_set_notation_decl_handler: null|true
+xml_set_object: null|true
+xml_set_processing_instruction_handler: null|true
+xml_set_start_namespace_decl_handler: null|true
+xml_set_unparsed_entity_decl_handler: null|true
+xmlwriter_end_attribute: null
+xmlwriter_end_cdata: null
+xmlwriter_end_comment: null
+xmlwriter_end_document: null
+xmlwriter_end_dtd: null
+xmlwriter_end_dtd_attlist: null
+xmlwriter_end_dtd_element: null
+xmlwriter_end_dtd_entity: null
+xmlwriter_end_element: null
+xmlwriter_end_pi: null
+xmlwriter_flush: null
+xmlwriter_full_end_element: null
+xmlwriter_open_memory: bool|null|resource
+xmlwriter_open_uri: bool|null|resource
+xmlwriter_output_memory: null
+xmlwriter_set_indent: bool|null
+xmlwriter_set_indent_string: null
+xmlwriter_start_attribute: null
+xmlwriter_start_attribute_ns: bool|null
+xmlwriter_start_cdata: bool
+xmlwriter_start_comment: bool
+xmlwriter_start_document: bool|null
+xmlwriter_start_dtd: bool|null
+xmlwriter_start_dtd_attlist: null
+xmlwriter_start_dtd_element: null
+xmlwriter_start_dtd_entity: bool|null
+xmlwriter_start_element: null
+xmlwriter_start_element_ns: bool|null
+xmlwriter_start_pi: null
+xmlwriter_text: null
+xmlwriter_write_attribute: bool|null
+xmlwriter_write_attribute_ns: bool|null
+xmlwriter_write_cdata: null
+xmlwriter_write_comment: null
+xmlwriter_write_dtd: bool|null
+xmlwriter_write_dtd_attlist: bool|null
+xmlwriter_write_dtd_element: bool|null
+xmlwriter_write_dtd_entity: bool|null
+xmlwriter_write_element: bool|null
+xmlwriter_write_element_ns: bool|null
+xmlwriter_write_pi: bool|null
+xmlwriter_write_raw: null
+zend_create_unterminated_string: null|string
+zend_leak_bytes: null
+zend_leak_variable: null
+zend_terminate_string: null
+zend_test_array_return: null
+zend_test_func: null|string
+zend_test_nullable_array_return: null
+zend_test_void_return: null
+Missing function array_rand: array|int|null|string
+Missing function cal_days_in_month: false|int|null
+Missing function cal_from_jd: array|false|null
+Missing function cal_info: array|false|null
+Missing function cal_to_jd: false|int|null
+Missing function ceil: float|null
+Missing function class_implements: array|false
+Missing function class_parents: array|false
+Missing function class_uses: array|false
+Missing function closelog: null|true
+Missing function collator_asort: null
+Missing function collator_compare: false|int
+Missing function collator_create: null
+Missing function collator_get_attribute: false|int
+Missing function collator_get_error_code: false|int
+Missing function collator_get_error_message: false|string
+Missing function collator_get_locale: false|string
+Missing function collator_get_sort_key: false|string
+Missing function collator_get_strength: false|int
+Missing function collator_set_attribute: bool
+Missing function collator_set_strength: bool
+Missing function collator_sort: null
+Missing function collator_sort_with_sort_keys: bool
+Missing function connection_aborted: int
+Missing function connection_status: int
+Missing function convert_cyr_string: null|string
+Missing function count: int|null
+Missing function crypt: null|string
+Missing function date_default_timezone_get: null|string
+Missing function datefmt_format: false|null
+Missing function datefmt_get_datetype: false|int
+Missing function datefmt_get_error_code: false|int
+Missing function datefmt_get_error_message: false|string
+Missing function datefmt_get_locale: false|string
+Missing function datefmt_get_pattern: false|string
+Missing function datefmt_get_timetype: false|int
+Missing function datefmt_is_lenient: bool
+Missing function datefmt_localtime: false|null
+Missing function datefmt_parse: false|null
+Missing function datefmt_set_lenient: false|null
+Missing function datefmt_set_pattern: bool
+Missing function debug_zval_dump: null
+Missing function decbin: null|string
+Missing function dechex: null|string
+Missing function decoct: null|string
+Missing function deg2rad: float|null
+Missing function dl: false|null
+Missing function dom_attr_is_id: bool|null
+Missing function dom_characterdata_append_data: null|true
+Missing function dom_characterdata_delete_data: bool|null
+Missing function dom_characterdata_insert_data: bool|null
+Missing function dom_characterdata_replace_data: bool|null
+Missing function dom_characterdata_substring_data: false|null|string
+Missing function dom_document_adopt_node: null
+Missing function dom_document_create_attribute: false|null
+Missing function dom_document_create_attribute_ns: false|null
+Missing function dom_document_create_cdatasection: false|null
+Missing function dom_document_create_comment: false|null
+Missing function dom_document_create_document_fragment: false|null
+Missing function dom_document_create_element: false|null
+Missing function dom_document_create_element_ns: false|null
+Missing function dom_document_create_entity_reference: false|null
+Missing function dom_document_create_processing_instruction: false|null
+Missing function dom_document_create_text_node: false|null
+Missing function dom_document_get_element_by_id: null
+Missing function dom_document_get_elements_by_tag_name: null
+Missing function dom_document_get_elements_by_tag_name_ns: null
+Missing function dom_document_import_node: false|null
+Missing function dom_document_normalize_document: null
+Missing function dom_document_relaxNG_validate_file: null
+Missing function dom_document_relaxNG_validate_xml: null
+Missing function dom_document_rename_node: null
+Missing function dom_document_save: false|int|null
+Missing function dom_document_save_html: false|null|string
+Missing function dom_document_save_html_file: false|int|null
+Missing function dom_document_savexml: false|null|string
+Missing function dom_document_schema_validate_file: null
+Missing function dom_document_schema_validate_xml: null
+Missing function dom_document_validate: bool|null
+Missing function dom_document_xinclude: false|int|null
+Missing function dom_domconfiguration_can_set_parameter: null
+Missing function dom_domconfiguration_get_parameter: null
+Missing function dom_domconfiguration_set_parameter: null
+Missing function dom_domerrorhandler_handle_error: null
+Missing function dom_domimplementationlist_item: null
+Missing function dom_domimplementationsource_get_domimplementation: null
+Missing function dom_domimplementationsource_get_domimplementations: null
+Missing function dom_domstringlist_item: null
+Missing function dom_element_get_attribute: null|string
+Missing function dom_element_get_attribute_node: false|null
+Missing function dom_element_get_attribute_node_ns: null
+Missing function dom_element_get_attribute_ns: null|string
+Missing function dom_element_get_elements_by_tag_name: null
+Missing function dom_element_get_elements_by_tag_name_ns: null
+Missing function dom_element_has_attribute: bool|null
+Missing function dom_element_has_attribute_ns: bool|null
+Missing function dom_element_remove_attribute: bool|null
+Missing function dom_element_remove_attribute_node: false|null
+Missing function dom_element_remove_attribute_ns: null
+Missing function dom_element_set_attribute: bool|null
+Missing function dom_element_set_attribute_node: false|null
+Missing function dom_element_set_attribute_node_ns: false|null
+Missing function dom_element_set_attribute_ns: false|null
+Missing function dom_element_set_id_attribute: null
+Missing function dom_element_set_id_attribute_node: null
+Missing function dom_element_set_id_attribute_ns: null
+Missing function dom_import_simplexml: null
+Missing function dom_namednodemap_count: false|null
+Missing function dom_namednodemap_get_named_item: null
+Missing function dom_namednodemap_get_named_item_ns: null
+Missing function dom_namednodemap_item: null
+Missing function dom_namednodemap_remove_named_item: null
+Missing function dom_namednodemap_remove_named_item_ns: null
+Missing function dom_namednodemap_set_named_item: null
+Missing function dom_namednodemap_set_named_item_ns: null
+Missing function dom_namelist_get_name: null
+Missing function dom_namelist_get_namespace_uri: null
+Missing function dom_node_append_child: false|null
+Missing function dom_node_clone_node: false|null
+Missing function dom_node_compare_document_position: null
+Missing function dom_node_get_feature: null
+Missing function dom_node_get_user_data: null
+Missing function dom_node_has_attributes: bool|null
+Missing function dom_node_has_child_nodes: bool|null
+Missing function dom_node_insert_before: false|null
+Missing function dom_node_is_default_namespace: bool|null
+Missing function dom_node_is_equal_node: null
+Missing function dom_node_is_same_node: bool|null
+Missing function dom_node_is_supported: bool|null
+Missing function dom_node_lookup_namespace_uri: null|string
+Missing function dom_node_lookup_prefix: null|string
+Missing function dom_node_normalize: null
+Missing function dom_node_remove_child: false|null
+Missing function dom_node_replace_child: false|null
+Missing function dom_node_set_user_data: null
+Missing function dom_nodelist_count: false|null
+Missing function dom_string_extend_find_offset16: null
+Missing function dom_string_extend_find_offset32: null
+Missing function dom_text_is_whitespace_in_element_content: bool|null
+Missing function dom_text_replace_whole_text: null
+Missing function dom_text_split_text: false|null
+Missing function dom_userdatahandler_handle: null
+Missing function dom_xpath_evaluate: null
+Missing function dom_xpath_query: null
+Missing function dom_xpath_register_ns: bool|null
+Missing function dom_xpath_register_php_functions: null|true
+Missing function easter_date: null
+Missing function easter_days: null
+Missing function error_clear_last: null
+Missing function exp: float|null
+Missing function expm1: float|null
+Missing function ezmlm_hash: int|null
+Missing function floatval: float|null
+Missing function floor: float|null
+Missing function flush: null
+Missing function fmod: float|null
+Missing function frenchtojd: int|null
+Missing function ftok: int|null
+Missing function get_current_user: null|string
+Missing function get_magic_quotes_gpc: false|null
+Missing function get_magic_quotes_runtime: false|null
+Missing function gettype: null|string
+Missing function grapheme_extract: false|string
+Missing function grapheme_stripos: false|int|null
+Missing function grapheme_stristr: null
+Missing function grapheme_strlen: false|int|null
+Missing function grapheme_strpos: false|int|null
+Missing function grapheme_strripos: false|int|null
+Missing function grapheme_strrpos: false|int|null
+Missing function grapheme_strstr: null
+Missing function grapheme_substr: false|string
+Missing function gregoriantojd: int|null
+Missing function hash_equals: bool|null
+Missing function hash_hkdf: false|null|string
+Missing function hash_hmac_algos: array
+Missing function header: null
+Missing function header_remove: null
+Missing function hrtime: false
+Missing function htmlentities: null
+Missing function htmlspecialchars: null
+Missing function hypot: float|null
+Missing function idn_to_ascii: null
+Missing function idn_to_utf8: null
+Missing function ignore_user_abort: int|null
+Missing function image_type_to_mime_type: null|string
+Missing function ini_restore: null
+Missing function intdiv: int|null
+Missing function intl_error_name: false|string
+Missing function intl_get_error_code: int
+Missing function intl_get_error_message: string
+Missing function intl_is_failure: bool
+Missing function intval: int|null
+Missing function is_soap_fault: bool
+Missing function iterator_apply: false|int|null
+Missing function iterator_count: false|int|null
+Missing function iterator_to_array: array|false|null
+Missing function jddayofweek: int|null|string
+Missing function jdmonthname: null|string
+Missing function jdtofrench: null|string
+Missing function jdtogregorian: null|string
+Missing function jdtojewish: false|null|string
+Missing function jdtojulian: null|string
+Missing function jdtounix: false|int|null
+Missing function jewishtojd: int|null
+Missing function json_decode: null
+Missing function json_last_error: int|null
+Missing function json_last_error_msg: null|string
+Missing function juliantojd: int|null
+Missing function lcg_value: float|null
+Missing function levenshtein: int|null
+Missing function libxml_clear_errors: null
+Missing function libxml_disable_entity_loader: bool|null
+Missing function libxml_get_errors: array|null
+Missing function libxml_get_last_error: false|null
+Missing function libxml_set_external_entity_loader: null|true
+Missing function libxml_set_streams_context: null
+Missing function libxml_use_internal_errors: bool|null
+Missing function locale_accept_from_http: false|string
+Missing function locale_canonicalize: null
+Missing function locale_compose: false|string
+Missing function locale_filter_matches: bool|null
+Missing function locale_get_all_variants: array|false|null
+Missing function locale_get_default: string
+Missing function locale_get_display_language: null
+Missing function locale_get_display_name: null
+Missing function locale_get_display_region: null
+Missing function locale_get_display_script: null
+Missing function locale_get_display_variant: null
+Missing function locale_get_keywords: array|false|null
+Missing function locale_get_primary_language: null
+Missing function locale_get_region: null
+Missing function locale_get_script: null
+Missing function locale_lookup: false|null|string
+Missing function locale_parse: array|false|null
+Missing function locale_set_default: bool
+Missing function log10: float|null
+Missing function log1p: float|null
+Missing function msg_queue_exists: bool|null
+Missing function msg_receive: bool
+Missing function msg_remove_queue: bool|null
+Missing function msg_send: bool
+Missing function msg_set_queue: bool
+Missing function msg_stat_queue: array|false
+Missing function msgfmt_create: null
+Missing function msgfmt_format: false|null
+Missing function msgfmt_format_message: false|null
+Missing function msgfmt_get_error_code: false|int
+Missing function msgfmt_get_error_message: false|string
+Missing function msgfmt_get_locale: false|string
+Missing function msgfmt_get_pattern: false|string
+Missing function msgfmt_parse: false|null
+Missing function msgfmt_parse_message: false|null
+Missing function msgfmt_set_pattern: bool
+Missing function mt_getrandmax: int|null
+Missing function mt_srand: null
+Missing function mysqli_connect_errno: int
+Missing function mysqli_driver_construct: null
+Missing function mysqli_free_result: false|null
+Missing function mysqli_get_charset: false|null
+Missing function mysqli_get_client_info: null|string
+Missing function mysqli_get_client_stats: null
+Missing function mysqli_get_client_version: int
+Missing function mysqli_get_connection_stats: false|null
+Missing function mysqli_init_method: null
+Missing function mysqli_insert_id: false|int|null|string
+Missing function mysqli_link_construct: null
+Missing function mysqli_report: null|true
+Missing function mysqli_result_construct: false|null
+Missing function mysqli_stat: false|null|string
+Missing function mysqli_stmt_affected_rows: false|int|null|string
+Missing function mysqli_stmt_construct: false|null
+Missing function mysqli_stmt_free_result: false|null
+Missing function net_get_interfaces: array|false|null
+Missing function normalizer_is_normalized: bool
+Missing function normalizer_normalize: false|null|string
+Missing function number_format: null|string
+Missing function numfmt_create: null
+Missing function numfmt_format: false|string
+Missing function numfmt_format_currency: false|null|string
+Missing function numfmt_get_attribute: false|float|int|null
+Missing function numfmt_get_error_code: false|int
+Missing function numfmt_get_error_message: false|string
+Missing function numfmt_get_locale: false|string
+Missing function numfmt_get_pattern: false|string
+Missing function numfmt_get_symbol: false|string
+Missing function numfmt_get_text_attribute: false|string
+Missing function numfmt_parse: false|float|int
+Missing function numfmt_parse_currency: false|float
+Missing function numfmt_set_attribute: bool
+Missing function numfmt_set_pattern: bool
+Missing function numfmt_set_symbol: bool
+Missing function numfmt_set_text_attribute: bool
+Missing function opcache_compile_file: bool|null
+Missing function opcache_get_configuration: array|false
+Missing function opcache_get_status: array|false|null
+Missing function opcache_invalidate: bool|null
+Missing function opcache_is_script_cached: bool
+Missing function opcache_reset: bool
+Missing function password_algos: array|null
+Missing function pcntl_alarm: int|null
+Missing function pcntl_async_signals: bool
+Missing function pcntl_exec: false|null
+Missing function pcntl_fork: int
+Missing function pcntl_get_last_error: int
+Missing function pcntl_getpriority: false|int
+Missing function pcntl_setpriority: bool
+Missing function pcntl_signal: bool|null
+Missing function pcntl_signal_dispatch: true
+Missing function pcntl_signal_get_handler: false|int|null
+Missing function pcntl_sigprocmask: bool|null
+Missing function pcntl_strerror: false|string
+Missing function pcntl_unshare: bool|null
+Missing function pcntl_wait: int|null
+Missing function pcntl_waitpid: int|null
+Missing function pcntl_wexitstatus: false
+Missing function pcntl_wifcontinued: false
+Missing function pcntl_wifexited: false
+Missing function pcntl_wifsignaled: false
+Missing function pcntl_wifstopped: false
+Missing function pcntl_wstopsig: false
+Missing function pcntl_wtermsig: false
+Missing function pdo_drivers: array|null
+Missing function php_strip_whitespace: false|null|string
+Missing function php_uname: null|string
+Missing function phpcredits: null|true
+Missing function phpinfo: null|true
+Missing function quoted_printable_decode: null|string
+Missing function quoted_printable_encode: null|string
+Missing function rad2deg: float|null
+Missing function random_bytes: null|string
+Missing function random_int: int|null
+Missing function range: array|false|null
+Missing function rawurldecode: null|string
+Missing function rawurlencode: null|string
+Missing function resourcebundle_count: false|int
+Missing function resourcebundle_create: null
+Missing function resourcebundle_get: false|null
+Missing function resourcebundle_get_error_code: false|int
+Missing function resourcebundle_get_error_message: false|string
+Missing function resourcebundle_locales: array|false
+Missing function restore_include_path: null
+Missing function sem_acquire: null
+Missing function sem_get: false|resource
+Missing function sem_release: null
+Missing function sem_remove: bool|null
+Missing function session_register_shutdown: null
+Missing function sha1: null|string
+Missing function shm_attach: false|null|resource
+Missing function shm_detach: bool|null
+Missing function shm_get_var: false|null
+Missing function shm_has_var: bool|null
+Missing function shm_put_var: bool|null
+Missing function shm_remove: bool|null
+Missing function shm_remove_var: bool|null
+Missing function shmop_close: null
+Missing function shmop_delete: bool|null
+Missing function shmop_open: false|null|resource
+Missing function shmop_read: false|null|string
+Missing function shmop_size: int|null
+Missing function shmop_write: false|int|null
+Missing function simplexml_import_dom: null|object
+Missing function simplexml_load_file: false|null|object
+Missing function simplexml_load_string: false|null|object
+Missing function spl_autoload: false|null
+Missing function spl_autoload_call: null
+Missing function spl_autoload_extensions: null|string
+Missing function spl_autoload_functions: array|false|null
+Missing function spl_autoload_register: bool|null
+Missing function spl_autoload_unregister: bool|null
+Missing function spl_classes: array
+Missing function spl_object_hash: null|string
+Missing function spl_object_id: int|null
+Missing function sqrt: float|null
+Missing function stream_bucket_append: null
+Missing function stream_bucket_new: false|null
+Missing function stream_bucket_prepend: null
+Missing function strval: null|string
+Missing function time: int|null
+Missing function timezone_version_get: string
+Missing function transliterator_create: null
+Missing function transliterator_create_from_rules: null
+Missing function transliterator_create_inverse: false|null
+Missing function transliterator_get_error_code: false|int
+Missing function transliterator_get_error_message: false|string
+Missing function transliterator_list_ids: array|false|null
+Missing function transliterator_transliterate: false|null|string
+Missing function uniqid: null|string
+Missing function unixtojd: false|int|null
+Missing function unregister_tick_function: null
+Missing function urldecode: null|string
+Missing function urlencode: null|string
+Missing function use_soap_error_handler: bool
+Missing function user_filter_nop: null
+Missing function user_printf: false|int|null
+Missing function user_sprintf: false|null|string
+Missing function var_dump: null
+Missing function xmlwriter_end_attribute: null
+Missing function xmlwriter_end_cdata: null
+Missing function xmlwriter_end_comment: null
+Missing function xmlwriter_end_document: null
+Missing function xmlwriter_end_dtd: null
+Missing function xmlwriter_end_dtd_attlist: null
+Missing function xmlwriter_end_dtd_element: null
+Missing function xmlwriter_end_dtd_entity: null
+Missing function xmlwriter_end_element: null
+Missing function xmlwriter_end_pi: null
+Missing function xmlwriter_flush: null
+Missing function xmlwriter_full_end_element: null
+Missing function xmlwriter_open_memory: bool|null|resource
+Missing function xmlwriter_open_uri: bool|null|resource
+Missing function xmlwriter_output_memory: null
+Missing function xmlwriter_set_indent: bool|null
+Missing function xmlwriter_set_indent_string: null
+Missing function xmlwriter_start_attribute: null
+Missing function xmlwriter_start_attribute_ns: bool|null
+Missing function xmlwriter_start_cdata: bool
+Missing function xmlwriter_start_comment: bool
+Missing function xmlwriter_start_document: bool|null
+Missing function xmlwriter_start_dtd: bool|null
+Missing function xmlwriter_start_dtd_attlist: null
+Missing function xmlwriter_start_dtd_element: null
+Missing function xmlwriter_start_dtd_entity: bool|null
+Missing function xmlwriter_start_element: null
+Missing function xmlwriter_start_element_ns: bool|null
+Missing function xmlwriter_start_pi: null
+Missing function xmlwriter_text: null
+Missing function xmlwriter_write_attribute: bool|null
+Missing function xmlwriter_write_attribute_ns: bool|null
+Missing function xmlwriter_write_cdata: null
+Missing function xmlwriter_write_comment: null
+Missing function xmlwriter_write_dtd: bool|null
+Missing function xmlwriter_write_dtd_attlist: bool|null
+Missing function xmlwriter_write_dtd_element: bool|null
+Missing function xmlwriter_write_dtd_entity: bool|null
+Missing function xmlwriter_write_element: bool|null
+Missing function xmlwriter_write_element_ns: bool|null
+Missing function xmlwriter_write_pi: bool|null
+Missing function xmlwriter_write_raw: null
+Missing function zend_create_unterminated_string: null|string
+Missing function zend_leak_bytes: null
+Missing function zend_leak_variable: null
+Missing function zend_terminate_string: null
+Missing function zend_test_array_return: null
+Missing function zend_test_func: null|string
+Missing function zend_test_nullable_array_return: null
+Missing function zend_test_void_return: null
