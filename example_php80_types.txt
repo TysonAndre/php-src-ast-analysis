@@ -1058,6 +1058,7 @@ Missing function gregoriantojd: int
 Missing function hash_equals: bool
 Missing function hash_hkdf: false|string
 Missing function hash_hmac_algos: array
+hash_update_stream: Could not cast false of false|int|null to ?int
 Missing function hrtime: false
 Missing function idn_to_ascii: probably-null
 Missing function idn_to_utf8: probably-null
@@ -1124,18 +1125,45 @@ Missing function msgfmt_get_pattern: false|string
 Missing function msgfmt_parse: false|probably-null
 Missing function msgfmt_parse_message: false|null|probably-null
 Missing function msgfmt_set_pattern: bool
+mysqli_affected_rows: Could not cast false of false|int|null|probably-null|string to ?int|?string
+mysqli_character_set_name: Could not cast false of false|null|probably-null|string to ?string
 Missing function mysqli_driver_construct: probably-null
+mysqli_errno: Could not cast false of false|int|null|probably-null to ?int
+mysqli_error: Could not cast false of false|null|probably-null|string to ?string
+mysqli_error_list: Could not cast false of array|false|null|probably-null to ?array
+mysqli_fetch_fields: Could not cast false of array|false|probably-null to ?array
+mysqli_field_count: Could not cast false of false|int|null|probably-null to ?int
+mysqli_field_tell: Could not cast false of false|int|probably-null to ?int
+mysqli_free_result: Could not cast false of false|probably-null to void
 Missing function mysqli_get_charset: false|null|probably-null
 Missing function mysqli_get_client_stats: probably-null
 Missing function mysqli_get_connection_stats: false|null|probably-null
+mysqli_get_host_info: Could not cast false of false|null|probably-null|string to ?string
+mysqli_get_proto_info: Could not cast false of false|int|null|probably-null to ?int
+mysqli_get_server_info: Could not cast false of false|null|probably-null|string to ?string
+mysqli_get_server_version: Could not cast false of false|int|null|probably-null to ?int
+mysqli_info: Could not cast false of false|null|probably-null|string to ?string
 Missing function mysqli_init_method: probably-null
 Missing function mysqli_insert_id: false|int|null|probably-null|string
 Missing function mysqli_link_construct: probably-null
+mysqli_real_escape_string: Could not cast false of false|null|probably-null|string to ?string
 Missing function mysqli_report: true
 Missing function mysqli_result_construct: false|null|probably-null
+mysqli_sqlstate: Could not cast false of false|null|probably-null|string to ?string
 Missing function mysqli_stat: false|null|probably-null|string
 Missing function mysqli_stmt_affected_rows: false|int|null|probably-null|string
 Missing function mysqli_stmt_construct: false|null|probably-null
+mysqli_stmt_errno: Could not cast false of false|int|null|probably-null to ?int
+mysqli_stmt_error: Could not cast false of false|null|probably-null|string to ?string
+mysqli_stmt_error_list: Could not cast false of array|false|null|probably-null to ?array
+mysqli_stmt_field_count: Could not cast false of false|int|null|probably-null to ?int
+mysqli_stmt_free_result: Could not cast false of false|null|probably-null to void
+mysqli_stmt_insert_id: Could not cast false of false|int|null|probably-null|string to ?int|?string
+mysqli_stmt_num_rows: Could not cast false of false|int|null|probably-null|string to ?int|?string
+mysqli_stmt_param_count: Could not cast false of false|int|null|probably-null to ?int
+mysqli_stmt_sqlstate: Could not cast false of false|null|probably-null|string to ?string
+mysqli_thread_id: Could not cast false of false|int|null|probably-null to ?int
+mysqli_warning_count: Could not cast false of false|int|null|probably-null to ?int
 Missing function net_get_interfaces: array|false
 Missing function next: mixed
 Missing function normalizer_is_normalized: bool
@@ -1186,6 +1214,7 @@ Missing function pcntl_wifstopped: false
 Missing function pcntl_wstopsig: false
 Missing function pcntl_wtermsig: false
 Missing function pdo_drivers: array|probably-null
+php_strip_whitespace: Could not cast false of false|probably-null|string to string
 Missing function preg_replace_callback_array: mixed
 Missing function prev: mixed
 Missing function random_bytes: probably-null|string
@@ -1228,6 +1257,7 @@ Missing function spl_classes: array
 Missing function spl_object_hash: string
 Missing function spl_object_id: int
 Missing function stream_bucket_append: probably-null
+stream_bucket_make_writeable: Could not cast null of false|null to false|object
 Missing function stream_bucket_new: false|probably-null
 Missing function stream_bucket_prepend: probably-null
 Missing function transliterator_create: null|probably-null

@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+use Phan\Language\UnionType;
+
 if ($argc !== 2) {
     echo "Usage: $argv[0] types.txt\n\n";
     echo "  Accepts a file containing 'Inferred return types for fn_name: [i1, i2, i3]\n";
@@ -90,17 +92,33 @@ foreach ($types as $function => $union_type) {
     echo "$function: $union_type\n";
 }
 
+
+function compare_function_type(string $function, string $extracted_type, array $signatures_from_elsewhere) {
+    if (array_key_exists($function, $signatures_from_elsewhere)) {
+        $union_type_from_elsewhere = UnionType::fromFullyQualifiedString($signatures_from_elsewhere[$function]);
+        foreach (explode('|', $extracted_type) as $type_part) {
+            if ($type_part === 'probably-null') {
+                return;
+            }
+            $type = UnionType::fromFullyQualifiedString($type_part);
+            if (!$type->canCastToUnionType($union_type_from_elsewhere)) {
+                echo "$function: Could not cast $type of $extracted_type to $union_type_from_elsewhere\n";
+            }
+        }
+        return;
+    }
+    echo "Missing function $function: $extracted_type\n";
+}
+
 // signatures_from_elsewhere was inferred from opcache for php 8. This will likely change.
 function compare_types(array $types, array $signatures_from_elsewhere) {
     foreach ($types as $function => $type) {
-        if (array_key_exists($function, $signatures_from_elsewhere)) {
-            continue;
-        }
-        echo "Missing function $function: $type\n";
+        compare_function_type($function, $type, $signatures_from_elsewhere);
     }
 }
 $phan_signature_map_path = '../phan/src/Phan/Language/Internal/FunctionSignatureMapReal.php';
 if (is_readable($phan_signature_map_path)) {
+    require_once '../phan/src/Phan/Bootstrap.php';
     $phan_signature_map = require($phan_signature_map_path);
     // echo json_encode(array_slice(array_keys($phan_signature_map), 0, 20)) . "\n";
     compare_types($types, $phan_signature_map);
