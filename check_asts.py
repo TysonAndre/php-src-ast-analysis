@@ -36,8 +36,15 @@ def do_constant_folding(node):
         new_c = do_constant_folding(c)
         if c != new_c:
             try:
-                setattr(node, name, new_c)
-            except Exception:
+                if '[' in name:
+                    i = name.index('[')
+                    idx = int(name[i+1:-1])
+                    plain_name = name[:i]
+                    getattr(node, plain_name)[idx] = new_c
+                else:
+                    setattr(node, name, new_c)
+            except Exception as e:
+                print(f"Could not set {name}: {e}")
                 # e.g. ParamList name="params[0]"
                 pass
 
@@ -72,6 +79,18 @@ def do_constant_folding(node):
         # used in combination with TernaryOp
         if is_id(node.name, 'zval_gc_flags'):
             return make_int_constant(0)
+    elif isinstance(node, If):
+        cond = node.cond
+        if isinstance(cond, Constant):
+            if cond.type == 'int':
+                # TODO return cond.iffalse
+                if cond.value == "0":
+                    # XXX ignore if(0) macros generated when DEBUG is disabled(optional)
+                    node.iftrue = None
+                else:
+                    # ignore other side of if(1)
+                    node.iffalse = None
+
     return node
 
 # Notes about C:
@@ -97,6 +116,10 @@ KNOWN_THROWS = {
     'zend_wrong_parameters_none_error',
     'zend_throw_exception_ex',
 }
+PARSE_PARAMS = (
+    'zend_parse_parameters',
+    'zend_parse_parameters_throw',
+)
 
 class Walker:
     def __init__(self):
@@ -189,7 +212,7 @@ class Walker:
             return False
         if not isinstance(call_node, FuncCall):
             return False
-        return 'zend_parse_parameters' in get_func_name(call_node)
+        return get_func_name(call_node) in PARSE_PARAMS
 
 
 
@@ -203,7 +226,7 @@ class Walker:
         if func_name in KNOWN_THROWS:
             run_if_debug(lambda: print("Recording that {0} would throw".format(func_name)))
             self.throws = True
-        elif func_name == 'zend_parse_parameters':
+        elif func_name in PARSE_PARAMS:
             self.record_zend_parse_parameters(node.args)
         elif func_name == 'zend_parse_parameters_none':
             self.record_zend_parse_parameters(None)
