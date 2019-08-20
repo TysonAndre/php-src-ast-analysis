@@ -41,6 +41,7 @@ const UNION_TYPE_LOOKUP = [
     'object',  // 8,
     'resource',  // 9,
     // 'IS_REFERENCE', // 10,
+    128 => 'probably-null',  // 128,
 ];
 function infer_type(string $function, string $values) : string {
     $parts = array_map('intval', array_map('trim', explode(',', $values)));
