@@ -358,12 +358,11 @@ def parse_ast_or_error(filename):
 NUM_PROCESSES = 4
 
 def parse_asts(files):
-    pool = Pool(processes=NUM_PROCESSES)
-
-    for filename, ast_or_error in pool.imap_unordered(parse_ast_or_error, files):
-        print("Main thread received {0} {1}".format(filename, type(ast_or_error)))
-        yield (filename, ast_or_error)
-    pool.join()
+    # Based on https://docs.python.org/3/library/multiprocessing.html#using-a-pool-of-workers
+    with Pool(processes=NUM_PROCESSES) as pool:
+        for filename, ast_or_error in pool.imap_unordered(parse_ast_or_error, files):
+            print("Main thread received {0} {1}".format(filename, type(ast_or_error)))
+            yield (filename, ast_or_error)
 
 def main():
     global DEBUG

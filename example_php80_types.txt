@@ -53,15 +53,17 @@ array_unshift: int
 array_values: array
 array_walk: true
 array_walk_recursive: true
-arsort: bool
+arsort: true
 asin: float
 asinh: float
-asort: bool
+asort: true
 assert: bool
 assert_options: mixed
 atan: float
 atan2: float
 atanh: float
+base64_decode: false|probably-null|string
+base64_encode: string
 base_convert: false|probably-null|string
 bcadd: string
 bccomp: int
@@ -83,9 +85,17 @@ call_user_func: mixed
 call_user_func_array: mixed
 ceil: float|probably-null
 checkdate: bool
+chgrp: probably-null
+chmod: bool
+chown: probably-null
+class_alias: bool|probably-null
+class_exists: probably-null
 class_implements: array|false
 class_parents: array|false
 class_uses: array|false
+clearstatcache: probably-null
+cli_get_process_title: null|probably-null|string
+cli_set_process_title: bool
 closelog: probably-null|true
 collator_asort: probably-null
 collator_compare: false|int
@@ -140,10 +150,10 @@ date_interval_format: false|string
 date_isodate_set: false|object
 date_modify: false|object
 date_offset_get: false|int|probably-null
-date_parse: false|probably-null
-date_parse_from_format: false|probably-null
+date_parse: probably-null
+date_parse_from_format: probably-null
 date_sub: false|object
-date_sun_info: array|false
+date_sun_info: array
 date_sunrise: probably-null
 date_sunset: probably-null
 date_time_set: false|object
@@ -163,11 +173,18 @@ datefmt_localtime: false|probably-null
 datefmt_parse: false|probably-null
 datefmt_set_lenient: false|probably-null
 datefmt_set_pattern: bool
+debug_backtrace: probably-null
+debug_print_backtrace: probably-null
 debug_zval_dump: probably-null
 decbin: string
 dechex: string
 decoct: string
+define: bool
+defined: bool|probably-null
 deg2rad: float
+disk_free_space: false|float
+disk_total_space: false|float
+display_disabled_function: probably-null
 dl: false|probably-null
 dom_attr_is_id: bool|null|probably-null
 dom_characterdata_append_data: null|true
@@ -275,14 +292,26 @@ end: mixed
 error_clear_last: probably-null
 error_get_last: array|probably-null
 error_log: bool
+error_reporting: int|probably-null
 exif_imagetype: false|int|probably-null
 exif_read_data: array|false
 exif_tagname: false|string
 exif_thumbnail: false|string
 exp: float
 expm1: float
+extension_loaded: bool|probably-null
 extract: int|probably-null
 ezmlm_hash: int
+file_exists: probably-null
+fileatime: probably-null
+filectime: probably-null
+filegroup: probably-null
+fileinode: probably-null
+filemtime: probably-null
+fileowner: probably-null
+fileperms: probably-null
+filesize: probably-null
+filetype: probably-null
 filter_has_var: bool
 filter_id: false|int
 filter_input: mixed
@@ -300,15 +329,43 @@ fprintf: false|int|probably-null
 frenchtojd: int
 fsockopen: probably-null
 ftok: int
+func_get_arg: mixed
+func_get_args: array|false|probably-null
+func_num_args: int|probably-null
+function_exists: bool
+gc_collect_cycles: int|probably-null
+gc_disable: probably-null
+gc_enable: probably-null
+gc_enabled: bool|probably-null
+gc_mem_caches: int|probably-null
+gc_status: array|probably-null
 get_browser: array|false|probably-null
+get_called_class: false|probably-null|string
 get_cfg_var: array|false|probably-null|string
+get_class: false|probably-null|string
+get_class_methods: array|null
+get_class_vars: array|false|probably-null
 get_current_user: probably-null|string
+get_declared_classes: probably-null
+get_declared_interfaces: probably-null
+get_declared_traits: probably-null
+get_defined_constants: array
+get_defined_functions: array
+get_defined_vars: array|probably-null
+get_extension_funcs: array|false|probably-null
 get_headers: array|false
 get_html_translation_table: array
 get_include_path: false|probably-null|string
+get_included_files: array|probably-null
+get_loaded_extensions: array
 get_magic_quotes_gpc: false|probably-null
 get_magic_quotes_runtime: false|probably-null
-getdate: array|false
+get_mangled_object_vars: array
+get_object_vars: array|probably-null
+get_parent_class: false|probably-null|string
+get_resource_type: probably-null|string
+get_resources: array|false|probably-null
+getdate: array
 getenv: array|false|string
 getimagesize: probably-null
 getimagesizefromstring: probably-null
@@ -354,6 +411,7 @@ hash_update: null|true
 hash_update_file: bool|null
 hash_update_stream: false|int|null
 header: probably-null
+header_register_callback: bool
 header_remove: probably-null
 headers_list: array|probably-null
 headers_sent: bool|probably-null
@@ -381,6 +439,7 @@ ini_get_all: array|false
 ini_restore: probably-null
 ini_set: false|probably-null|string
 intdiv: int
+interface_exists: probably-null
 intl_error_name: string
 intl_get_error_code: int
 intl_get_error_message: string
@@ -389,24 +448,32 @@ intval: int
 ip2long: false|int
 iptcembed: bool|probably-null|string
 iptcparse: array|false|probably-null
+is_a: probably-null
 is_array: probably-null
 is_bool: bool
 is_callable: bool
 is_countable: bool
+is_dir: probably-null
+is_executable: probably-null
+is_file: probably-null
 is_finite: bool
 is_float: probably-null
 is_infinite: bool
 is_int: probably-null
 is_iterable: bool
+is_link: probably-null
 is_nan: bool
 is_null: probably-null
 is_numeric: bool
 is_object: probably-null
+is_readable: probably-null
 is_resource: probably-null
 is_scalar: bool
 is_soap_fault: bool
 is_string: probably-null
+is_subclass_of: probably-null
 is_uploaded_file: bool|probably-null
+is_writable: probably-null
 iterator_apply: false|int|probably-null
 iterator_count: int|probably-null
 iterator_to_array: array|null
@@ -424,9 +491,11 @@ json_last_error: int|probably-null
 json_last_error_msg: probably-null|string
 juliantojd: int
 key: probably-null
-krsort: bool
-ksort: bool
+krsort: true
+ksort: true
 lcg_value: float|probably-null
+lchgrp: probably-null
+lchown: true
 levenshtein: int|probably-null
 libxml_clear_errors: probably-null
 libxml_disable_entity_loader: bool
@@ -455,16 +524,17 @@ locale_get_script: probably-null
 locale_lookup: null|string
 locale_parse: array|null
 locale_set_default: true
-localtime: array|false
+localtime: array
 log: false|float
 log10: float
 log1p: float
 long2ip: false|probably-null|string
 mail: bool|probably-null
 max: mixed
-memory_get_peak_usage: false|int
-memory_get_usage: false|int
+memory_get_peak_usage: int
+memory_get_usage: int
 metaphone: false|probably-null|string
+method_exists: bool
 microtime: probably-null
 min: mixed
 mktime: probably-null
@@ -618,6 +688,19 @@ numfmt_set_attribute: bool
 numfmt_set_pattern: bool
 numfmt_set_symbol: bool
 numfmt_set_text_attribute: bool
+ob_clean: bool|probably-null
+ob_end_clean: bool|probably-null
+ob_end_flush: bool|probably-null
+ob_flush: bool|probably-null
+ob_get_clean: false|probably-null
+ob_get_contents: false|probably-null
+ob_get_flush: false|probably-null
+ob_get_length: false|probably-null
+ob_get_level: int|probably-null
+ob_get_status: array|probably-null
+ob_implicit_flush: probably-null
+ob_list_handlers: array|probably-null
+ob_start: bool
 octdec: probably-null
 opcache_compile_file: bool|probably-null
 opcache_get_configuration: array|false
@@ -626,6 +709,8 @@ opcache_invalidate: bool|probably-null
 opcache_is_script_cached: bool
 opcache_reset: bool
 openlog: bool
+output_add_rewrite_var: bool|probably-null
+output_reset_rewrite_vars: bool|probably-null
 pack: false|string
 parse_ini_file: array|false
 parse_ini_string: array|false
@@ -662,7 +747,7 @@ pfsockopen: probably-null
 php_ini_loaded_file: false|probably-null|string
 php_ini_scanned_files: false|probably-null|string
 php_sapi_name: false|probably-null|string
-php_strip_whitespace: false|probably-null|string
+php_strip_whitespace: probably-null|string
 php_uname: string
 phpcredits: true
 phpinfo: true
@@ -680,7 +765,8 @@ preg_replace_callback: probably-null|string
 preg_replace_callback_array: mixed
 preg_split: false|probably-null
 prev: mixed
-print_r: bool|probably-null|string
+print_r: probably-null|string|true
+property_exists: bool|null
 putenv: bool|probably-null
 quoted_printable_decode: string
 quoted_printable_encode: string
@@ -692,6 +778,8 @@ range: array|false|probably-null
 rawurldecode: string
 rawurlencode: string
 readlink: false|string
+realpath_cache_get: array|probably-null
+realpath_cache_size: int|probably-null
 register_shutdown_function: false|probably-null
 register_tick_function: bool|probably-null
 reset: mixed
@@ -701,9 +789,11 @@ resourcebundle_get: false|probably-null
 resourcebundle_get_error_code: false|int
 resourcebundle_get_error_message: false|string
 resourcebundle_locales: array|false
+restore_error_handler: probably-null|true
+restore_exception_handler: probably-null|true
 restore_include_path: probably-null
 round: false|float
-rsort: bool
+rsort: true
 sem_acquire: probably-null
 sem_get: false|resource
 sem_release: probably-null
@@ -731,6 +821,8 @@ session_start: bool
 session_status: int|probably-null
 session_unset: bool|probably-null
 session_write_close: bool|probably-null
+set_error_handler: mixed
+set_exception_handler: mixed
 set_include_path: false|probably-null|string
 setcookie: bool|probably-null
 setrawcookie: bool|probably-null
@@ -750,14 +842,17 @@ shmop_open: false|resource
 shmop_read: false|probably-null|string
 shmop_size: int|probably-null
 shmop_write: false|int|probably-null
-shuffle: bool
+shuffle: true
 simplexml_import_dom: null|object|probably-null
 simplexml_load_file: false|object
 simplexml_load_string: false|object
 sin: float
 sinh: float
 sleep: false|int
-sort: bool
+socket_cmsg_space: int|probably-null
+socket_recvmsg: false|int|probably-null
+socket_sendmsg: false|int|probably-null
+sort: true
 soundex: false|string
 spl_autoload: probably-null
 spl_autoload_call: probably-null
@@ -769,13 +864,21 @@ spl_classes: array
 spl_object_hash: string
 spl_object_id: int
 sqrt: float
+strcasecmp: int
+strcmp: int
 stream_bucket_append: probably-null
-stream_bucket_make_writeable: false|null
+stream_bucket_make_writeable: null|probably-null
 stream_bucket_new: false|probably-null
 stream_bucket_prepend: probably-null
 stream_filter_register: bool
 stream_get_filters: array|probably-null
+stream_wrapper_register: bool
+stream_wrapper_restore: bool
+stream_wrapper_unregister: bool
 strftime: probably-null
+strlen: int
+strncasecmp: false|int
+strncmp: false|int
 strptime: array|false
 strtotime: false|int|probably-null
 strval: string
@@ -796,6 +899,8 @@ timezone_offset_get: false|int
 timezone_open: false|probably-null
 timezone_transitions_get: array|false
 timezone_version_get: string
+touch: bool
+trait_exists: probably-null
 transliterator_create: null|probably-null
 transliterator_create_from_rules: null|probably-null
 transliterator_create_inverse: false|null|probably-null
@@ -803,6 +908,7 @@ transliterator_get_error_code: false|int
 transliterator_get_error_message: false|string
 transliterator_list_ids: array|false|probably-null
 transliterator_transliterate: false|probably-null|string
+trigger_error: bool
 uasort: probably-null
 uksort: probably-null
 uniqid: string
@@ -896,6 +1002,7 @@ zend_test_array_return: probably-null
 zend_test_func: probably-null|string
 zend_test_nullable_array_return: probably-null
 zend_test_void_return: probably-null
+zend_version: probably-null|string
 Missing function array_pop: mixed
 Missing function array_rand: array|int|probably-null|string
 Missing function array_reduce: mixed
@@ -909,6 +1016,8 @@ Missing function call_user_func_array: mixed
 Missing function class_implements: array|false
 Missing function class_parents: array|false
 Missing function class_uses: array|false
+Missing function cli_get_process_title: null|probably-null|string
+Missing function cli_set_process_title: bool
 Missing function collator_asort: probably-null
 Missing function collator_compare: false|int
 Missing function collator_create: null|probably-null
@@ -935,6 +1044,7 @@ Missing function datefmt_localtime: false|probably-null
 Missing function datefmt_parse: false|probably-null
 Missing function datefmt_set_lenient: false|probably-null
 Missing function datefmt_set_pattern: bool
+Missing function display_disabled_function: probably-null
 Missing function dl: false|probably-null
 Missing function dom_attr_is_id: bool|null|probably-null
 Missing function dom_characterdata_append_data: null|true
@@ -1045,6 +1155,10 @@ Missing function filter_var: mixed
 Missing function forward_static_call: mixed
 Missing function forward_static_call_array: mixed
 Missing function frenchtojd: int
+Missing function func_get_arg: mixed
+Missing function gc_mem_caches: int|probably-null
+Missing function gc_status: array|probably-null
+Missing function get_resources: array|false|probably-null
 Missing function grapheme_extract: false|string
 Missing function grapheme_stripos: false|int|probably-null
 Missing function grapheme_stristr: probably-null
@@ -1214,7 +1328,6 @@ Missing function pcntl_wifstopped: false
 Missing function pcntl_wstopsig: false
 Missing function pcntl_wtermsig: false
 Missing function pdo_drivers: array|probably-null
-php_strip_whitespace: Could not cast false of false|probably-null|string to string
 Missing function preg_replace_callback_array: mixed
 Missing function prev: mixed
 Missing function random_bytes: probably-null|string
@@ -1231,6 +1344,7 @@ Missing function sem_acquire: probably-null
 Missing function sem_get: false|resource
 Missing function sem_release: probably-null
 Missing function sem_remove: bool
+Missing function set_exception_handler: mixed
 Missing function shm_attach: false|probably-null|resource
 Missing function shm_detach: bool|probably-null
 Missing function shm_get_var: false|probably-null
@@ -1247,6 +1361,9 @@ Missing function shmop_write: false|int|probably-null
 Missing function simplexml_import_dom: null|object|probably-null
 Missing function simplexml_load_file: false|object
 Missing function simplexml_load_string: false|object
+Missing function socket_cmsg_space: int|probably-null
+Missing function socket_recvmsg: false|int|probably-null
+Missing function socket_sendmsg: false|int|probably-null
 Missing function spl_autoload: probably-null
 Missing function spl_autoload_call: probably-null
 Missing function spl_autoload_extensions: probably-null|string
@@ -1257,7 +1374,7 @@ Missing function spl_classes: array
 Missing function spl_object_hash: string
 Missing function spl_object_id: int
 Missing function stream_bucket_append: probably-null
-stream_bucket_make_writeable: Could not cast null of false|null to false|object
+stream_bucket_make_writeable: Could not cast null of null|probably-null to false|object
 Missing function stream_bucket_new: false|probably-null
 Missing function stream_bucket_prepend: probably-null
 Missing function transliterator_create: null|probably-null
