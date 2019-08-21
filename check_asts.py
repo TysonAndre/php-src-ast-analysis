@@ -5,6 +5,7 @@ import pycparser
 import argparse
 import sys
 import traceback
+from multiprocessing import Process, Pool
 from pycparser.c_ast import Assignment, Constant, BinaryOp, ExprList, Node, Decl, FuncCall, FuncDef, TernaryOp, If, ID, Return, StructRef, UnaryOp, TypeDecl, PtrDecl
 from pycparser.plyparser import ParseError
 
@@ -308,9 +309,8 @@ def run_if_debug(fn):
     if DEBUG:
         fn()
 
-def extract_function_signatures(filename: str):
-    stmt_list = pycparser.parse_file(filename)
-    print("Finished parsing " + str(filename), flush=True)
+def extract_function_signatures(filename: str, stmt_list):
+    # print("About to process " + str(filename), flush=True)
     if len(stmt_list.children()) == 0:
         raise Exception("Failed to load " + filename)
     for top_level_stmt in stmt_list:
@@ -332,10 +332,10 @@ def extract_function_signatures(filename: str):
 
         # top_level_stmt.show()
 
-def process_file(filename):
+def process_file(filename, ast):
     try:
         print("Processing " + str(filename), flush=True)
-        extract_function_signatures(filename)
+        extract_function_signatures(filename, ast)
         print("Successfully processed " + str(filename), flush=True)
     except Exception as e:
         print("Failed to parse " + str(filename))
@@ -343,11 +343,35 @@ def process_file(filename):
         if not isinstance(e, ParseError):
             traceback.print_exc()
 
+def parse_ast_or_error(filename):
+    '''
+    Helper for parallel parsing
+    '''
+    try:
+        stmt_list = pycparser.parse_file(filename)
+        if len(stmt_list.children()) == 0:
+            raise Exception("Failed to load " + filename)
+        return (filename, stmt_list)
+    except Exception as e:
+        return (filename, e)
+
+NUM_PROCESSES = 4
+
+def parse_asts(files):
+    pool = Pool(processes=NUM_PROCESSES)
+
+    for filename, ast_or_error in pool.imap_unordered(parse_ast_or_error, files):
+        print("Main thread received {0} {1}".format(filename, type(ast_or_error)))
+        yield (filename, ast_or_error)
+    pool.join()
+
 def main():
     global DEBUG
+    global NUM_PROCESSES
     parser = argparse.ArgumentParser(prog='check_asts')
     parser.add_argument('--dir', nargs='+', help='list of directories')
     parser.add_argument('--file', nargs='+', help='list of files')
+    parser.add_argument('--processes', type=int, help='number of processes')
     parser.add_argument('--verbose', action='store_true', help='enable debug output')
     args = parser.parse_args()
     print("Args: ", args)
@@ -358,6 +382,8 @@ def main():
     '''
     if args.verbose:
         DEBUG = True
+    if args.processes and args.processes > 0:
+        NUM_PROCESSES = args.processes
 
     # TODO: Add --dir or --file flags
     if args.file is not None:
@@ -368,8 +394,11 @@ def main():
     else:
         filenames = list(Path('../php-src').glob('**/*.normalized_c'))
 
-    for filename in filenames:
-        process_file(filename)
+    for filename, ast_or_error in parse_asts(filenames):
+        if isinstance(ast_or_error, Node):
+            process_file(filename, ast_or_error)
+        else:
+            print("Caught exception parsing {0}: {1}", filename, repr(ast_or_error))
 
     print("Found {0} filenames in ../php-src/**/*.normalized_c".format(len(filenames)))
 
