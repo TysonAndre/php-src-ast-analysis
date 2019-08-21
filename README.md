@@ -5,6 +5,13 @@ A collection of scripts for analyzing the C ASTs of functions of php-src.
 This focuses on determining the real types of parameters/return values of internal functions and methods,
 when this information is not available in reflection.
 
+Dependencies
+------------
+
+- php-src forked to change macros and headers to be easier to parse: https://github.com/TysonAndre/php-src/tree/parsing-patches
+- https://github.com/TysonAndre/pycparser (with a few additional header definitions)
+- gcc
+
 Running
 -------
 

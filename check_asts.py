@@ -310,6 +310,7 @@ def run_if_debug(fn):
 
 def extract_function_signatures(filename: str):
     stmt_list = pycparser.parse_file(filename)
+    print("Finished parsing " + str(filename), flush=True)
     if len(stmt_list.children()) == 0:
         raise Exception("Failed to load " + filename)
     for top_level_stmt in stmt_list:
