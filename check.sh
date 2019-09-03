@@ -25,7 +25,7 @@ fi
 for file in $(find "$EXTENSION_DIR" -iname '*.c' -print0 | xargs -0 grep -RE '(PHP|ZEND)_(FUNCTION|METHOD)' -l ); do
     BASE_DIR=$(dirname "$file")
     echo "Processing $file"
-    gcc -nostdinc -D__m128d= -D__inline= -D'__attribute__(x)=' -E "$file" \
+    gcc -nostdinc -D__inline= -D'__attribute__(x)=' -E "$file" \
         -I pycparser/utils/fake_libc_include \
         -I fake_libc_include_extra \
         -I "$PHP_SRC_DIR/Zend" \
