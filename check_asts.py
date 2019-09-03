@@ -172,7 +172,7 @@ class Walker:
                 if isinstance(node_type, TypeDecl) and isinstance(node_type.declname, str):
                     print("Adding " + node_type.declname + " to locals")
                     self.locals = self.locals | {node_type.declname}
-            print("In walker.walk for Decl")
+            run_if_debug(lambda: print("In walker.walk for Decl"))
             # node.show()
         elif isinstance(node, Assignment):
             run_if_debug(lambda: print("Processing an Assignment. locals: {0}".format(str(self.locals))))
