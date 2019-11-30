@@ -15,7 +15,7 @@ Dependencies
 Running
 -------
 
-1. Run `check.sh ../php-src ../php-src/ext` to generate normalized ASTs against php-src.
+1. Run `./check.sh ../php-src ../php-src/ext` to generate normalized ASTs against php-src.
    https://github.com/TysonAndre/php-src/tree/parsing-patches may be used.
    (It removes dependencies on C header files and annotations that pycparser won't parse (and has no intentions of parsing) (e.g. gcc-specific annotations)
 
@@ -33,7 +33,7 @@ Running
 
    If the union type outputted by `process_types` contains `null`, then it's likely to be incorrect.
 
-   - TODO: Distinguish between absense of a return statement and an explicit return such as a `RETURN_NULL;` macro, when possible.
+   - TODO: Distinguish between absence of a return statement and an explicit return such as a `RETURN_NULL;` macro, when possible.
    - TODO: Check for constructs that throw exceptions and don't infer union types for those in `check_asts.py`
 
    If `../phan/src/Phan/Language/Internal/FunctionSignatureMapReal.php` exists, this will print the union types which were missing from it. (Signatures containing `null` are likely to be incorrect.)

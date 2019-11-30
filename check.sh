@@ -27,7 +27,9 @@ for file in $(find "$EXTENSION_DIR" -iname '*.c' -print0 | xargs -0 grep -RE '(P
     echo "Processing $file"
     gcc -nostdinc -D__inline= -D'__attribute__(x)=' -E "$file" \
         -I pycparser/utils/fake_libc_include \
+        -I pycparser/utils/fake_libc_include \
         -I fake_libc_include_extra \
+        -I fake_libc_include_extra/mysql \
         -I "$PHP_SRC_DIR/Zend" \
         -I "$PHP_SRC_DIR/main" \
         -I "$PHP_SRC_DIR" \
