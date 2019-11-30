@@ -20,7 +20,7 @@ Running
    (It removes dependencies on C header files and annotations that pycparser won't parse (and has no intentions of parsing) (e.g. gcc-specific annotations)
 
    This will fail on a few files. Editing those files, adding include paths to check.sh, or adding files to `fake_libc_include_extra` will help fix that.
-2. Run `./check_asts.py [--file path/to/individual_file1.c.c_normalized] | tee analysis_results_php80.txt` (requires patches from https://github.com/eliben/pycparser/pull/344 to parse one file in date libraries to to regex backtracking)
+2. Run `./check_asts.py [--file path/to/individual_file1.c.c_normalized] | tee analysis_results_php80.txt` (requires master branch from https://github.com/eliben/pycparser/pull/347 to parse one file in date libraries to to regex backtracking)
 
    By default, this runs on ../php-src.
 3. Run `php process_types.php` to generate union types that **could be inferred** from php-src (or the extension in question).

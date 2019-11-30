@@ -107,6 +107,20 @@ function compare_function_type(string $function, string $extracted_type, array $
         }
         return;
     }
+    try {
+        $reflection_type = (new ReflectionFunction($function))->getReturnType();
+        if ($reflection_type) {
+            $union_type = UnionType::fromReflectionType($reflection_type);
+            $extracted_union_type = UnionType::fromFullyQualifiedString(str_replace('probably-', '', $extracted_type));
+            if ($union_type->asNormalizedTypes()->isEqualTo($extracted_union_type->asNormalizedTypes())) {
+                return;
+            }
+        }
+    } catch (ReflectionException $_) {
+        // ignore
+    } catch (Exception $e) {
+        echo "Caught {$e->getMessage()}\n";
+    }
     echo "Missing function $function: $extracted_type\n";
 }
 

@@ -6,8 +6,9 @@ import argparse
 import sys
 import traceback
 from multiprocessing import Process, Pool
-from pycparser.c_ast import Assignment, Constant, BinaryOp, ExprList, Node, Decl, FuncCall, FuncDef, TernaryOp, If, ID, Return, StructRef, UnaryOp, TypeDecl, PtrDecl
+from pycparser.c_ast import Assignment, Constant, BinaryOp, ExprList, Node, Decl, FuncCall, FuncDef, TernaryOp, If, DoWhile, ID, Return, StructRef, UnaryOp, TypeDecl, PtrDecl, Break, Continue, Switch
 from pycparser.plyparser import ParseError
+from functools import lru_cache
 
 def make_int_constant(value):
     return Constant(type='int', value=str(value))
@@ -116,10 +117,12 @@ KNOWN_THROWS = {
     'zend_wrong_parameter_type_error',
     'zend_wrong_parameters_none_error',
     'zend_throw_exception_ex',
+    'zend_type_error',
 }
 PARSE_PARAMS = (
     'zend_parse_parameters',
     'zend_parse_parameters_throw',
+    'zend_parse_method_parameters',
 )
 
 class Walker:
@@ -158,6 +161,9 @@ class Walker:
 
         if is_conditional:
             self.conditional_depth -= 1
+            if self.conditional_depth == 0:
+                if self.will_unconditionally_return(c):
+                    self.types |= self.types_in_conditionals
 
         self.locals = old_locals
         self.throws |= old_throws
@@ -190,6 +196,33 @@ class Walker:
                     self.types_in_conditionals.add(IS_PROBABLY_NULL)
         elif isinstance(node, FuncCall):
             self.handle_func_call(node)
+
+    @lru_cache(maxsize=None)
+    def will_unconditionally_return(self, node):
+        if not isinstance(node, Node):
+            return False
+        if isinstance(node, Return):
+            return True
+        if isinstance(node, If):
+            cond = node.cond
+            if isinstance(cond, Constant):
+                if cond.type == 'int':
+                    # TODO return cond.iffalse
+                    if cond.value == "0":
+                        return self.will_unconditionally_return(node.iffalse)
+                    else:
+                        return self.will_unconditionally_return(node.iftrue)
+            if node.iffalse is None:
+                return False
+            return all(self.will_unconditionally_return(c) for c in [node.iffalse, node.iftrue])
+        if isinstance(node, Switch):
+            # TODO implement
+            return False
+
+        if isinstance(node, DoWhile):
+            return self.will_unconditionally_return(node.stmt)
+
+        return any(self.will_unconditionally_return(c) for c in node)
 
     def if_has_parameter_check(self, node):
         """
