@@ -6,6 +6,7 @@ use Phan\Language\UnionType;
 if ($argc !== 2) {
     echo "Usage: $argv[0] types.txt\n\n";
     echo "  Accepts a file containing 'Inferred return types for fn_name: [i1, i2, i3]\n";
+    echo "  This should be run with the same php version the Inferred return types lines were extracted from\n";
     exit(1);
 }
 $file = $argv[1];
@@ -92,36 +93,46 @@ foreach ($types as $function => $union_type) {
     echo "$function: $union_type\n";
 }
 
+function warn_about_impossible_opcache_types(string $function, UnionType $opcache_union_type, UnionType $reflection_union_type) : void {
+    // echo "warn_about_impossible_opcache_types for $function $opcache_union_type $reflection_union_type\n";
+    foreach ($opcache_union_type->getTypeSet() as $type) {
+        if (!$type->asUnionType()->canCastToUnionType($reflection_union_type)) {
+            echo "Incompatible type for $function found in zend_func_info.c: $type not in $reflection_union_type\n";
+        }
+    }
+}
 
 function compare_function_type(string $function, string $extracted_type, array $signatures_from_elsewhere) {
-    if (array_key_exists($function, $signatures_from_elsewhere)) {
-        $union_type_from_elsewhere = UnionType::fromFullyQualifiedString($signatures_from_elsewhere[$function]);
-        foreach (explode('|', $extracted_type) as $type_part) {
-            if ($type_part === 'probably-null') {
-                return;
-            }
-            $type = UnionType::fromFullyQualifiedString($type_part);
-            if (!$type->canCastToUnionType($union_type_from_elsewhere)) {
-                echo "$function: Could not cast $type of $extracted_type to $union_type_from_elsewhere\n";
-            }
-        }
-        return;
-    }
     try {
         $reflection_type = (new ReflectionFunction($function))->getReturnType();
         if ($reflection_type) {
-            $union_type = UnionType::fromReflectionType($reflection_type);
-            $extracted_union_type = UnionType::fromFullyQualifiedString(str_replace('probably-', '', $extracted_type));
-            if ($union_type->asNormalizedTypes()->isEqualTo($extracted_union_type->asNormalizedTypes())) {
-                return;
-            }
+            $union_type_from_reflection = UnionType::fromReflectionType($reflection_type);
         }
     } catch (ReflectionException $_) {
         // ignore
     } catch (Exception $e) {
         echo "Caught {$e->getMessage()}\n";
     }
-    echo "Missing function $function: $extracted_type\n";
+    if (array_key_exists($function, $signatures_from_elsewhere)) {
+        $union_type_from_funcinfo = UnionType::fromFullyQualifiedString($signatures_from_elsewhere[$function]);
+        // echo "$function extracted=$extracted_type elsewhere=$union_type_from_funcinfo\n";
+        foreach (explode('|', $extracted_type) as $type_part) {
+            if ($type_part === 'probably-null') {
+                continue;
+            }
+            $type = UnionType::fromFullyQualifiedString($type_part);
+            if (!$type->canCastToUnionType($union_type_from_funcinfo)) {
+                echo "$function: Could not cast $type of $extracted_type to $union_type_from_funcinfo\n";
+            }
+        }
+        if (isset($union_type_from_funcinfo) && isset($union_type_from_reflection)) {
+            warn_about_impossible_opcache_types($function, $union_type_from_funcinfo, $union_type_from_reflection->asNormalizedTypes());
+        }
+        return;
+    }
+    if (!isset($union_type_from_reflection)) {
+        echo "Missing function $function: $extracted_type\n";
+    }
 }
 
 // signatures_from_elsewhere was inferred from opcache for php 8. This will likely change.
